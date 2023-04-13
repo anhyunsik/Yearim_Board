@@ -16,7 +16,7 @@ namespace Board2
         }
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            UserRepository userRepo = new UserRepository();
+            UserRepository userRepo = new UserRepository();//테스트
             User_Id = userRepo.GetUserId(txtUserID.Text, txtPassword.Text);
 
             if (userRepo.IsCorrectUser(txtUserID.Text, txtPassword.Text) == true)
